@@ -1,0 +1,18 @@
+Lockheed Martin Space - Software Engineer
+
+This position is for a Software Engineer supporting the Space Software Product Line Mobile User Objective System Service Life Extension (MUOS SLE) Software Systems Team.
+
+Basic Qualifications:
+- Programming experience required
+- Be able to understand SV CONOPS
+- Be able to troubleshoot issues with minimum supervision
+- Be able to collaborate with others
+
+Desired Skills:
+- Python
+- Unit testing
+- Agile programming
+- Full stack development
+- STARS / EASY framework
+- Software testing
+- VM Infrastructure

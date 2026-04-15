@@ -1,0 +1,20 @@
+FishEye Software - C++ Software Engineer (Cooperative Engagement Capability)
+
+Key Responsibilities:
+- Design, implement, and test C++ software for real-time and embedded defense systems.
+- Participate in design, code reviews, and verification to ensure high-quality, reliable software.
+- Troubleshoot, debug, and resolve complex technical challenges within multi-threaded and distributed systems.
+
+Required Skills:
+- This position requires an Active Secret Clearance; US Citizenship is required.
+- BS in Computer Science, Engineering, or related field
+- Minimum of 4 years of hands-on C++ software development experience.
+- Proficiency in Linux-based environments
+- Familiarity with Agile methodologies, Scrum, and CI/CD practices
+- Experience with real-time operating systems (RTOS) and embedded programming
+- Proficiency with Git, ClearCase, SVN, or similar version control systems
+
+Desired Skills:
+- Radar domain knowledge and/or experience in defense/aerospace systems
+
+Salary: $80000 - $190000 per year

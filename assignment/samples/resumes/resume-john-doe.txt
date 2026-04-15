@@ -1,0 +1,25 @@
+John Doe
+john.doe@example.com | +1-555-123-4567 | linkedin.com/in/johndoe
+
+Summary
+Backend Software Engineer with 4.5 years of experience building scalable microservices.
+Salary expectation: 12 LPA
+
+Experience
+Senior Software Engineer - TechCorp
+Jan 2022 - Present
+- Designed and implemented REST APIs using Java and Spring Boot
+- Deployed microservices to Kubernetes clusters on AWS
+- Worked with MySQL and PostgreSQL databases, Redis caching
+
+Software Engineer - StartupXYZ
+Jun 2020 - Dec 2021
+- Built Python data pipelines processing 100M+ records
+- Used Docker for local development and CI/CD with Jenkins
+- Collaborated with React frontend team
+
+Skills
+Java, Spring Boot, Python, MySQL, PostgreSQL, Docker, Kubernetes, AWS, REST API, Git, Agile, Jenkins, Redis
+
+Education
+Bachelor of Engineering in Computer Science - XYZ University, 2020

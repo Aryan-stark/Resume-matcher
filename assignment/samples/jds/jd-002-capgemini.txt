@@ -1,0 +1,18 @@
+Capgemini - Software Engineer
+
+Job Description
+Should have 7 years of strong hands on experience with Core Java Spring boot.
+Should have 4 years of strong hands on experience with Angular or React.
+Hands On experience Relational Database Microsoft SQL Server UDB DB2 or No SQL is required.
+Should have strong hands on experience working on Microservices Kafka REST API Development experience.
+Hands on experience working with containerization technologies Docker Kubernetes.
+Experience in modernizing rewriting legacy application to modernized distributed platforms.
+Core Banking Or Financial Wealth Management Domain Working Experience Required.
+
+Good to have:
+Python experience
+AI/ML exposure is valuable
+Experience in Cloud platforms Azure etc
+Experience in DevOps pipeline CI/CD practice any tools eg Jenkins
+
+The base compensation range for this role in the posted location is: 61087 - 104364 USD

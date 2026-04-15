@@ -1,0 +1,18 @@
+Riverside Research is an independent National Security Nonprofit dedicated to research and development in the national interest.
+
+Position Overview
+Riverside Research's Applied Mathematics and Physics Solutions group is seeking a Scientific Programmer/Software Engineer to support development of high-performance large scale scientific simulation codes.
+
+Required Qualifications:
+- Bachelor's with 5+ years of experience, or Master's with 3+ years of experience
+- Applied programming experience with low-level languages like C, C++ and/or Fortran
+- Applied software development on and for Linux or other Unix-like systems
+- Applied experience coding with Python, Unix shell scripting
+- Experienced with version control software applications
+
+Desired Qualifications:
+- Experience with parallel programming on high-performance computers (MPI and/or OpenMP)
+- Experience developing cross-platform (Windows and Linux) software
+
+Global Comp
+$180,000 - $220,000 per annum

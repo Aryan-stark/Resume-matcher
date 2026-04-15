@@ -1,0 +1,23 @@
+Jane Smith
+jane.smith@example.com | +1-555-987-6543
+
+Professional Summary
+Full-stack engineer with 3 years of experience in Python, TypeScript, and cloud infrastructure.
+
+Experience
+Software Engineer - Rocket Labs
+Aug 2022 - Present
+- Developed Python services for real-time telemetry analysis
+- Built gRPC and REST APIs serving internal tools
+- Managed AWS deployments using Kubernetes and Docker
+- Used Protobuf and YAML for data serialization
+
+Junior Developer - Fintech Inc
+Jul 2021 - Jul 2022
+- Wrote TypeScript for internal dashboards
+- Contributed to open-source projects
+
+Skills: Python, TypeScript, Go, AWS, Kubernetes, Docker, gRPC, REST API, JSON, YAML, Protobuf, Git
+
+Education
+B.S. in Computer Science - ABC University, 2021

@@ -1,0 +1,18 @@
+Meta - Software Engineer, Infrastructure
+
+Minimum Qualifications:
+- Bachelor's degree in Computer Science, Computer Engineering, or relevant technical field
+- 2+ years of programming experience in a relevant language OR a PhD + 9 months programming experience
+- Track record of setting technical direction for a team
+- Experience building maintainable and testable code bases, including API design and unit testing techniques
+
+Preferred Qualifications:
+- Experience owning a component, feature or system
+- Experience in programming languages such as C, C++, Java
+- Exposure to architectural patterns of large scale software applications
+- Experience designing, analyzing and improving efficiency, scalability, and stability of various system resources
+- 2+ years of relevant experience building large-scale infrastructure applications
+- 1+ years of experience identifying, designing and completing medium to large features independently without guidance
+- Experience with scripting languages such as Python, Javascript or Hack
+
+$58.65/hour to $181,000/year

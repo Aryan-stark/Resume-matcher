@@ -1,0 +1,20 @@
+Applied Materials - Software Engineer
+
+Salary: $176,000.00 - $242,000.00
+Location: Santa Clara, CA
+
+Role Responsibilities:
+- Design and develop code for large scale complex software solutions for semiconductor equipment
+- Lead and execute complex software projects
+- Define software specifications and test plan
+
+Minimum Qualifications:
+- Bachelor's degree in Computer Science, Electrical Engineering, Mathematics, Physics, or a related field.
+- 7-10 years of related experience
+- Extensive experience with controlling instrument/equipment requiring high precision and high repeatability
+
+Preferred Qualifications:
+- PhD degree in a related field
+- Proficient in Modern C++, Python, C#/Java/Rust, machine learning, web service architecture, signal processing, computer vision, robotics, user interface design, mathematical modelling, numerical methods for physical simulation, GPU programming
+- Extensive experience with development on embedded system and PyTorch
+- Experience with FPGA is preferred

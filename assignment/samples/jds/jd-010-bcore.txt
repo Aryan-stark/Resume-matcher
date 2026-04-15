@@ -1,0 +1,19 @@
+Bcore - Software Engineer
+Chantilly, VA
+
+Required Qualifications:
+- Demonstrated experience with tools used with cloud services.
+- Demonstrated experience establishing stateless implementations from architectures in cloud service providers.
+- Demonstrated experience with configuration management and data repositories.
+- Demonstrated experience with COTS products used in Linux and Windows environments.
+- Demonstrated experience using DevOps tools such as, Jenkins, Kubernetes, Chef, and Terraform.
+
+Desired Qualifications:
+- Node JS
+- React
+- MySQL
+- Python
+- Bash
+- Javascript
+- Experience with UI development
+- Experience with Back-end development

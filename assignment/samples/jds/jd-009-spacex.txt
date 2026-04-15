@@ -1,0 +1,21 @@
+SpaceX - Full Stack Software Engineer (Build Reliability)
+
+We are seeking a Full Stack Software Engineer to design, develop, and continuously improve software solutions.
+
+Basic Qualifications:
+- Bachelor's degree in computer science, engineering, math, or scientific discipline; OR 2+ years of professional experience building software in lieu of a degree
+- Experience in full stack development
+
+Preferred Skills and Experience:
+- 5+ years of experience in web applications development
+- Expertise in C#, .NET, SQL, HTML, CSS, AngularJS, TypeScript
+- Expertise in Python, PostgreSQL
+- Deep understanding of object oriented programming and design principles
+- Deep understanding of testing, continuous integration, build, deployment & continuous monitoring
+- Experience scaling web applications and optimizing applications for performance
+- Solid understanding of UI/UX design
+- Experience developing software for manufacturing, production, or quality systems
+
+Pay Range:
+Software Engineer/Level I: $120,000.00 - $145,000.00/per year
+Software Engineer/Level II: $140,000.00 - $170,000.00/per year

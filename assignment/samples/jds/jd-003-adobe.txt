@@ -1,0 +1,19 @@
+Adobe - Software Engineer
+
+The Opportunity
+Adobe is seeking talented and passionate Software Engineer across all organizations to help plan, design, develop, and test software systems or applications for software enhancements and new products used in local, networked, cloud-based or Internet-related computer programs and products.
+
+What You'll Do:
+- Develop high-performance, reliable, testable, and maintainable code.
+- Collaborate with engineers and participate in daily or weekly stand-ups and meetings.
+
+What You Need To Succeed:
+- Bachelor's or Master's in Computer Science or equivalent experience required
+- 5-7+ years of relevant experience
+- Proficient in programming languages such as Python, Java, C++, etc.
+- Strong technical background with analytical and problem-solving skills.
+- Interest or experience in AI/ML concepts, with exposure to AI tools, is a plus.
+- Familiarity with client-side frameworks and libraries like React, Angular, jQuery is a plus.
+- Excellent problem-solving and debugging skills, and direct experience with DevOps in a SaaS environment is a plus.
+
+The U.S. pay range for this position is $139,000 - $257,550 annually.

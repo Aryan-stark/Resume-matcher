@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Resume ↔ JD Matcher</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, Segoe UI, system-ui, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
+    header { padding: 24px; background: #1e293b; border-bottom: 1px solid #334155; }
+    header h1 { margin: 0; font-size: 20px; font-weight: 600; }
+    header p { margin: 4px 0 0; color: #94a3b8; font-size: 14px; }
+    main { max-width: 1100px; margin: 24px auto; padding: 0 24px; display: grid; grid-template-columns: 380px 1fr; gap: 24px; }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 20px; }
+    .card h2 { margin: 0 0 12px; font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: #93c5fd; }
+    label { display: block; margin-bottom: 10px; font-size: 13px; color: #cbd5e1; }
+    input[type=file] { display: block; width: 100%; padding: 10px; border-radius: 6px; background: #0f172a; border: 1px solid #475569; color: #e2e8f0; }
+    button { background: #3b82f6; color: white; border: 0; padding: 10px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px; }
+    button:hover { background: #2563eb; }
+    button:disabled { background: #475569; cursor: not-allowed; }
+    pre { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 16px; overflow: auto; max-height: 70vh; font-size: 12px; line-height: 1.5; }
+    .job { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 14px; margin-top: 12px; }
+    .job h3 { margin: 0 0 6px; font-size: 14px; color: #fbbf24; }
+    .score { display: inline-block; padding: 2px 10px; border-radius: 999px; background: #22c55e; color: #052e16; font-weight: 700; font-size: 12px; margin-left: 8px; }
+    .score.low { background: #ef4444; color: #450a0a; }
+    .score.mid { background: #eab308; color: #422006; }
+    .skill-present { color: #86efac; }
+    .skill-missing { color: #fca5a5; text-decoration: line-through; opacity: 0.7; }
+    .skill-chips { margin-top: 6px; }
+    .chip { display: inline-block; margin: 2px 4px 0 0; padding: 2px 8px; border-radius: 4px; background: #334155; font-size: 12px; }
+    .about { font-size: 12px; color: #94a3b8; margin: 4px 0 10px; line-height: 1.5; }
+    .meta { font-size: 12px; color: #94a3b8; }
+    @media (max-width: 880px) { main { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Resume ↔ Job Description Matcher</h1>
+    <p>Rule-based parsing — no LLMs. Upload a resume and one or more JD files (PDF, DOCX, or TXT) to see the match report.</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Upload</h2>
+      <form id="form">
+        <label>Resume (PDF / DOCX / TXT)
+          <input type="file" id="resume" name="resume" accept=".pdf,.docx,.txt" required />
+        </label>
+        <label>Job Descriptions (one or more)
+          <input type="file" id="jds" name="jds" accept=".pdf,.docx,.txt" multiple required />
+        </label>
+        <button type="submit" id="submit">Match</button>
+        <p class="meta" id="status"></p>
+      </form>
+    </section>
+    <section class="card">
+      <h2>Result</h2>
+      <div id="result">
+        <p class="meta">Upload files on the left and click <strong>Match</strong>.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('form');
+    const status = document.getElementById('status');
+    const result = document.getElementById('result');
+    const submitBtn = document.getElementById('submit');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const resume = document.getElementById('resume').files[0];
+      const jds = document.getElementById('jds').files;
+      if (!resume || jds.length === 0) return;
+
+      const fd = new FormData();
+      fd.append('resume', resume);
+      for (const f of jds) fd.append('jds', f);
+
+      submitBtn.disabled = true;
+      status.textContent = 'Parsing and matching…';
+      result.innerHTML = '';
+
+      try {
+        const res = await fetch('/api/match-upload', { method: 'POST', body: fd });
+        if (!res.ok) throw new Error(await res.text());
+        const data = await res.json();
+        render(data);
+        status.textContent = 'Done.';
+      } catch (err) {
+        status.textContent = 'Error: ' + err.message;
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    function scoreClass(n) { return n >= 70 ? '' : (n >= 40 ? 'mid' : 'low'); }
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+
+    function render(data) {
+      const top = `
+        <div class="job">
+          <h3>${esc(data.name || '(name not detected)')}</h3>
+          <div class="meta">
+            Salary: ${esc(data.salary || '—')} · Experience: ${esc(data.yearOfExperience ?? '—')} yrs
+          </div>
+          <div class="skill-chips">
+            ${(data.resumeSkills || []).map(s => `<span class="chip">${esc(s)}</span>`).join('')}
+          </div>
+        </div>
+      `;
+      const jobs = (data.matchingJobs || []).map(j => `
+        <div class="job">
+          <h3>${esc(j.role || j.jobId)} <span class="score ${scoreClass(j.matchingScore)}">${j.matchingScore}%</span></h3>
+          <p class="about">${esc(j.aboutRole || '')}</p>
+          <div>
+            ${(j.skillsAnalysis || []).map(s => `
+              <span class="${s.presentInResume ? 'skill-present' : 'skill-missing'}">
+                ${s.presentInResume ? '✓' : '✗'} ${esc(s.skill)}
+              </span>`).join(' · ')}
+          </div>
+        </div>
+      `).join('');
+      result.innerHTML = top + jobs + `<details style="margin-top:16px"><summary>Raw JSON</summary><pre>${esc(JSON.stringify(data, null, 2))}</pre></details>`;
+    }
+  </script>
+</body>
+</html>
